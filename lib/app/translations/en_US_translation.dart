@@ -1,3 +1,5 @@
 final Map<String, String> enUS = {
-  'greeting' : 'Hello'
+  'greeting' : 'Welcome Back',
+  'signintext' : 'Sign In with your email and Password',
+  'submittext' : 'Submit',
 };

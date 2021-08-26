@@ -1,4 +1,5 @@
 import 'package:bluestacks_assignment/app/data/repositories/users_repository.dart';
+import 'package:bluestacks_assignment/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -35,15 +36,17 @@ class LoginController extends GetxController {
   LoginController(this.repository);
 
   void authenticate() {
+
     print(usernameEditingController.text +
         "   " +
         passwordEditingController.text);
     if (repository.authenticate(
         usernameEditingController.text, passwordEditingController.text)) {
       print("Login Success");
-      localStorage.write("username",usernameEditingController.text);
+      localStorage.write("username", usernameEditingController.text);
       Get.snackbar("Logged In", "You Have Successfully Logged In ",
           colorText: Colors.white, backgroundColor: Colors.green);
+      Get.offNamed(Routes.HOME);
     } else {
       print("Login Failed");
       Get.snackbar(

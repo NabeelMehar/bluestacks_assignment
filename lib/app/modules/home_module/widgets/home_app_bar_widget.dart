@@ -7,20 +7,27 @@ class HomeAppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Row(
-          children: [
-            CustomHamburgerWidget(),
-            Expanded(
-                child: Text(
-              "Flyingwolf",
-              style: TextStyle(
-                  color: Color(0xff2D2D32),
-                  fontFamily: 'Roboto',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            )),
-          ],
+        Container(
+          height: AppBar().preferredSize.height,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 15,
+              ),
+              CustomHamburgerWidget(),
+              Expanded(
+                  child: Text(
+                "Flyingwolf",
+                style: TextStyle(
+                    color: Color(0xff2D2D32),
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              )),
+            ],
+          ),
         ),
       ],
     );

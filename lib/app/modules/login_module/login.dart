@@ -14,30 +14,30 @@ class LoginPage extends GetView<LoginController> {
         title: Text("Sign in"),
       ),
       body: SafeArea(
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(14.w),
-          child: Column(
-            children: [
-              SizedBox(height: 0.04.sh),
-              Text(
-                "Welcome Back",
-                style: headingStyle,
-                textAlign: TextAlign.center,
-              ),
-              Text(
-                "Sign in with your email and password",
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 0.04.sh),
-              LogoWidget(),
-              SizedBox(height: 0.04.sh),
-              SignForm(),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(14.w),
+            child: Column(
+              children: [
+                SizedBox(height: 0.04.sh),
+                Text(
+                  "Welcome Back",
+                  style: headingStyle,
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  "Sign in with your email and password",
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 0.04.sh),
+                LogoWidget(),
+                SizedBox(height: 0.04.sh),
+                SignForm(),
+              ],
+            ),
           ),
         ),
       ),
-    ),
     );
   }
 }

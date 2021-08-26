@@ -7,6 +7,7 @@ abstract class AppPages {
 
   static final pages = [
     GetPage(name: Routes.LOGIN , page:()=> LoginPage()),
-    GetPage(name: Routes.HOME, page:()=> HomePage())
+    GetPage(name: Routes.HOME, page:()=> HomePage()),
+    GetPage(name: Routes.HOMEWBINDING, page:()=> HomePage())
   ];
 } 
